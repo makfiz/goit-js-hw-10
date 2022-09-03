@@ -18,6 +18,7 @@ searchBox.addEventListener('input', () => {
 
 function showFoundCountries(name) {
     fetchCountries(name).then(response => {
+        if (response === undefined) return
         if (response.length > 10) {
             Notify.info("Too many matches found. Please enter a more specific name.")
             clearTemplate()
