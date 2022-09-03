@@ -64,7 +64,7 @@ function countryInfoCretor(country) {
 function countryListCreatr(countrys) {
     clearTemplate()
  
-    const totalCountryList = countrys.map(country => `<li>
+    const totalCountryList = countrys.map(country => `<li style="display: flex;align-items: center;margin-bottom: 10px;">
         <img 
             style="width: 50px;"
             src="${country.flags.svg}"
@@ -72,7 +72,7 @@ function countryListCreatr(countrys) {
             ${country.name.official}
         </li>`).join('')
 
-    countryList.style.fontSize = '25px'
+    countryList.style.fontSize = '22px'
     countryList.style.listStyle = 'none'
     countryList.style.padding = '0px 0px'
     countryList.style.margin = '0px 0px'
