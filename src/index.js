@@ -20,6 +20,7 @@ function showFoundCountries(name) {
     fetchCountries(name).then(response => {
         if (response.length > 10) {
             Notify.info("Too many matches found. Please enter a more specific name.")
+            clearTemplate()
             return
         }
     
