@@ -47,7 +47,7 @@ function countryInfoCretor(country) {
     const population = country.population
     const flag = country.flags.svg
     const languages = Object.values(country.languages)
-    const element = `<ul style="font-size:22px; list-style-type:none;">
+    const element = `<ul style="font-size:22px; list-style-type:none; padding: 0px 0px; margin: 0px 0px">
             <li style="font-size:35px;  margin-bottom: 25px"><img 
             style="width: 50px;"
             src="${flag}"
@@ -72,7 +72,9 @@ function countryListCreatr(countrys) {
             ${country.name.official}
         </li>`).join('')
 
-    countryList.insertAdjacentHTML('beforeend', totalCountryList) 
     countryList.style.fontSize = '25px'
     countryList.style.listStyle = 'none'
+    countryList.style.padding = '0px 0px'
+    countryList.style.margin = '0px 0px'
+    countryList.insertAdjacentHTML('beforeend', totalCountryList) 
 }
